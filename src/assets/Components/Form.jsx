@@ -1,0 +1,29 @@
+import Button from "./Button";
+import Input from "./Input";
+import TextArea from "./TextArea";
+
+
+const Form = (props) => {
+    return (
+        <div className="bg-gray-500 lg:h-screen h-[60vh] lg:w-1/2 p-10 ">
+            <h1 className="text-3xl font-bold mb-5 tracking-wider">Create Your Note</h1>
+            <form
+                onSubmit={(e) => {
+                    e.preventDefault();
+                    props.onHeadingChange('');
+                    props.onDetailsChanging('');
+                }}
+                className="flex flex-col">
+
+                <Input heading={props.heading} onHeadingChange={props.onHeadingChange} />
+
+                <TextArea details={props.details} onDetailsChanging={props.setDetails}/>
+
+                <Button />
+
+            </form>
+        </div>
+    )
+}
+
+export default Form
