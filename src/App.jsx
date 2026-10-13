@@ -6,15 +6,15 @@ const App = () => {
 
   const [title, setTitle] = useState('');
   const [details,setDetails] = useState('');
-  const [notes, setNotes] = useState({});       //This is where I am leaving this project right now (13-10-26)
+  const [notes, setNotes] = useState([]);       
 
 
   return (
     <div className="flex lg:flex-row flex-col">
 
-      <Form heading={title} onHeadingChange={setTitle} details={details} onDetailsChanging={setDetails}/>
+      <Form heading={title} onHeadingChange={setTitle} details={details} onDetailsChanging={setDetails} notes={notes} setNotes={setNotes}/>
 
-      <Section2 />
+      <Section2 notes={notes} setNotes={setNotes}/>
 
     </div>
   )

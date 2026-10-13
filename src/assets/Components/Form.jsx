@@ -5,11 +5,21 @@ import TextArea from "./TextArea";
 
 const Form = (props) => {
     return (
-        <div className="bg-gray-500 lg:h-screen h-[60vh] lg:w-1/2 p-10 ">
+        <div className="bg-gray-500 lg:h-screen h-[68vh] lg:w-1/2 p-10 ">
             <h1 className="text-3xl font-bold mb-5 tracking-wider">Create Your Note</h1>
             <form
                 onSubmit={(e) => {
                     e.preventDefault();
+                    
+                    const copyNotes = [...props.notes];
+
+                    copyNotes.push({
+                        heading: props.heading,
+                        details: props.details
+                    })
+
+                    props.setNotes(copyNotes);
+                    
                     props.onHeadingChange('');
                     props.onDetailsChanging('');
                 }}
@@ -17,7 +27,7 @@ const Form = (props) => {
 
                 <Input heading={props.heading} onHeadingChange={props.onHeadingChange} />
 
-                <TextArea details={props.details} onDetailsChanging={props.setDetails}/>
+                <TextArea details={props.details} onDetailsChanging={props.onDetailsChanging}/>
 
                 <Button />
 
