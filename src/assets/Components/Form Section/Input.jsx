@@ -8,7 +8,6 @@ const Input = (props) => {
                     props.onHeadingChange(e.target.value);
                 }}
                 className="p-3 bg-white font-medium outline-none mb-3 h-10 w-full rounded" />
-            <input />
         </div>
     )
 }

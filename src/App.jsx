@@ -1,6 +1,6 @@
 import { useState } from "react"
-import Form from "./assets/Components/Form"
-import Section2 from "./assets/Notes Section/Section2"
+import Form from "./assets/Components/Form Section/Form"
+import Section2 from "./assets/Components/Notes Section/Section2"
 
 const App = () => {
 

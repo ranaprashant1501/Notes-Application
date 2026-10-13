@@ -5,8 +5,8 @@ import TextArea from "./TextArea";
 
 const Form = (props) => {
     return (
-        <div className="bg-gray-500 lg:h-screen h-[68vh] lg:w-1/2 p-10 ">
-            <h1 className="text-3xl font-bold mb-5 tracking-wider">Create Your Note</h1>
+        <div className="bg-gray-600  lg:h-screen h-[68vh] lg:w-1/2 p-10 ">
+            <h1 className="text-4xl text-[#C9CEBD] font-bold mb-5 tracking-wider">Create Your Note</h1>
             <form
                 onSubmit={(e) => {
                     e.preventDefault();
