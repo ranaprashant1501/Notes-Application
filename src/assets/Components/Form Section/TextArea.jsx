@@ -3,7 +3,7 @@
 const TextArea = (props) => {
     return (
         <div>
-            <textarea name="message" id="message" placeholder="Enter Details here..." value={props.details}
+            <textarea required name="message" id="message" placeholder="Enter Details here..." value={props.details}
                 onChange={(e) => {
                     props.onDetailsChanging(e.target.value);
                 }}

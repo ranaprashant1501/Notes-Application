@@ -3,7 +3,7 @@
 const Input = (props) => {
     return (
         <div>
-            <input type="text" placeholder="Enter Note's Heading" value={props.heading}
+            <input  required type="text" placeholder="Enter Note's Heading" value={props.heading}
                 onChange={(e) => {
                     props.onHeadingChange(e.target.value);
                 }}
